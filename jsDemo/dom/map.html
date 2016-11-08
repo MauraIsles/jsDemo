@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<style type="text/css">  
+	html{height:100%}  
+	body{height:100%;margin:0px;padding:0px}  
+	#container{height:100%}  
+	</style>
+	<!-- <script type="text/javascript" src="http://ditu.google.cn/maps/api/js?sensor=false&key=abcdef"></script> -->
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0CFy0ZDUt39FGGlx4XxYSgO6GUID36Q2&s=1"></script>
+	<script type="text/javascript">
+		/*function initialize() {
+			var myLatlng = new google.maps.LatLng(-34.397, 150.644);
+			var myOptions = {
+				zoom: 8,
+				center: myLatlng,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById("container"), myOptions);
+		}*/
+		/*function initialize() {
+			var container = document.getElementById("container");
+			var map = new GMap2(container);
+			map.setZoom(8);
+			map.setCenter(new GLatLng(-34.397, 150.644));
+			map.setMapType(map.G_NORMAL_MAP);
+		}*/
+		function initialize() {
+			var map = new BMap.Map("container");
+			var point = new BMap.Point(116.404, 39.644);
+			map.centerAndZoom(point, 1);
+			// map.setMapType(MapType.BMAP_NORMAL_MAP);
+			map.enableScrollWheelZoom();
+		}
+		window.onload = initialize;
+	</script>
+</head>
+<body>
+	<div id="container"></div>
+</body>
+</html>
